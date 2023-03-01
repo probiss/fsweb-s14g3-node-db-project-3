@@ -1,3 +1,5 @@
+const db = require('../../data/db-config');
+
 function find() { // Egzersiz A
   /*
     1A- Aşağıdaki SQL sorgusunu SQLite Studio'da "data/schemes.db3" ile karşılaştırarak inceleyin.
