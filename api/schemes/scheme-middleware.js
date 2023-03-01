@@ -1,3 +1,4 @@
+const Scheme = require("./scheme-model");
 const db = require("../../data/db-config");
 /*
   Eğer `scheme_id` veritabanında yoksa:
@@ -60,11 +61,11 @@ const validateScheme = async (req, res, next) => {
 */
 const validateStep = async (req, res, next) => {
   try {
-    const { instruction, step_number } = req.body;
+    const { instructions, step_number } = req.body;
     if (
-      instruction === undefined ||
-      typeof instruction !== "string" ||
-      instruction.trim() == "" ||
+      instructions === undefined ||
+      typeof instructions !== "string" ||
+      instructions.trim() == "" ||
       typeof step_number !== "number" ||
       step_number < 1
     ) {
